@@ -35,8 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
       souris(key);
     }
   }
+
   // Fonction pour gérer les clics sur les boutons
   function souris(value) {
+    // Autoriser uniquement les actions lorsque la calculatrice n'est pas en mode sombre
+    if (dark) {
+      return;
+    }
+
     if (value === "=") {
       // Évaluez l'expression mathématique
       try {

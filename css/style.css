@@ -16,8 +16,7 @@ body {
 
 * {
   box-sizing: border-box;
-  transition: all 1s ease;
-  outline: 10;
+  transition: all 5s ease;
 }
 
 .calculatrice {
@@ -25,9 +24,11 @@ body {
   padding-top: 60px;
   height: auto;
   width: auto;
+  max-width: 400px;
   border-radius: 16px;
   background-color: white;
   box-shadow: 0 0 60px black;
+  position: relative;
 }
 
 input {
@@ -83,8 +84,8 @@ button:hover {
 
 .thb {
   position: absolute;
-  top: 100px;
-  right: 620px;
+  top: 30px;
+  right: 30px;
   color: white;
   cursor: pointer;
   z-index: 1;

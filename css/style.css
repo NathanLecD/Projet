@@ -1,136 +1,35 @@
 body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(79, 51, 176, 1),
-    rgba(210, 53, 165)
-  );
-  background-size: cover;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   height: 100vh;
 }
 
-* {
-  box-sizing: border-box;
-  transition: all 5s ease;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.calculatrice {
-  padding: 20px;
-  padding-top: 60px;
-  height: auto;
+.btn {
+  text-align: center;
+  align-items: center;
   width: auto;
-  max-width: 400px;
-  border-radius: 16px;
-  background-color: white;
-  box-shadow: 0 0 60px black;
-  position: relative;
-}
-
-input {
-  width: 320px;
-  border: none;
-  padding: 24px;
-  margin: 10px;
-  margin-bottom: 20px;
-  text-align: right;
-  background: transparent;
-  box-shadow: 0px 2px 10px black;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-.calculatrice input {
-  color: black;
-}
-
-input::placeholder {
-  color: black;
-}
-
-button {
-  border: none;
-  width: 60px;
-  height: 60px;
-  margin: 10px;
-  border-radius: 50%;
-  background-color: grey;
+  margin: 0 auto;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  padding: 1em 2em;
   color: white;
-  font-size: 20px;
+  border: none;
   cursor: pointer;
-  transition: all 200ms ease;
-}
-
-button:hover {
-  transform: scale(1.1);
-}
-
-.zero {
-  width: 144px;
+  transition: all 0.2s ease-in-out;
   border-radius: 50px;
-}
-
-.operation {
-  background-color: orange;
-}
-
-.operation1 {
-  background-color: #696969;
-}
-
-.thb {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  color: white;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.thb.actif::before {
-  background-color: white;
-}
-
-.thb::before {
-  content: "";
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background-color: black;
-  z-index: -1;
-}
-
-/* dark theme */
-.calculatrice.dark {
-  background-color: #071115;
-}
-
-.calculatrice.dark input {
-  color: white;
-}
-
-.calculatrice.dark input::placeholder {
-  color: white;
-}
-
-.calculatrice.dark button {
-  background-color: black;
-  color: white;
-}
-
-.calculatrice.dark button.operation1 {
-  background-color: #4b0082;
-  color: white;
-}
-
-.calculatrice.dark button.operation {
-  background-color: #000080;
-  color: white;
+  position: relative;
+  overflow: hidden;
 }

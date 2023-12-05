@@ -13,7 +13,13 @@
         <div class="thb actif">
           <i class="icon"></i>
         </div>
-        <input type="text" name="boxinput" placeholder="0" />
+        <div class="thbhex actif" onclick="toggleHexMode()">
+          <i class="hex"> </i>
+        </div>
+        <div class="thbdec actif" onclick="toggleDecMode()">
+          <i class="dec"> </i>
+        </div>
+        <input type="text" name="boxinput" placeholder="0" readonly />
         <div>
           <button class="button operation1">AC</button>
           <button class="button operation1">+/-</button>
